@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+
+</head>
+<body>
+  <div>
+    <form action="http://www.baidu.com">
+      <h6>form 中只有一个type="text"的input，按钮无论是什么类型回车键都生效</h6>
+      <input type="text">
+      <input type="submit" value="提交">
+    </form>
+    <form action="http://www.baidu.com" target="_blank">
+      <h6>form 中只有一个type="text"的input，阻止回车键生效(增加一个input然后设置display:none;且按钮类型不能为submit)</h6>
+      <input type="text">
+      <input type="hidden" style="display: none">
+      <input type="button" value="提交">
+    </form>
+    <form action="http://www.baidu.com" target="_blank">
+      <h6>form 中有多个type="text"的input，按钮类型必须为submit，回车键才生效，button类型不生效(button标签也一样)</h6>
+      <input type="text">
+      <input type="text">
+      <!-- <input type="submit" value="提交"> -->
+      <button type="button">提交</button>
+
+    </form>
+    <form action="http://www.baidu.com" target="_blank">
+      <h6>form 中textarea，无论按钮是什么类型回车键都不生效</h6>
+      <textarea></textarea>
+      <!-- <input type="text"> -->
+      <input type="submit" value="提交">
+      <!-- <button>提交</button> -->
+
+    </form>
+    <form action="http://www.baidu.com" target="_blank">
+      <h6>form 中当type为radio,checkbox时，只有当按钮为submit类型时回车键才生效（无论是1个还是多个）</h6>
+      <!-- <textarea></textarea> -->
+      <input type="checkbox" value="左">
+      <!-- <input type="checkbox" value="左"> -->
+      <input type="button" value="提交">
+      <!-- <button>提交</button> -->
+
+    </form>
+  </div>
+</body>
+</html>
